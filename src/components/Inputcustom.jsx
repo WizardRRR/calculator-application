@@ -1,6 +1,4 @@
-import React from 'react'
-
-const Inputcustom = ({ value, onChange }) => {
+export default function Inputcustom({ value, onChange }) {
   return (
     <input
       type='number'
@@ -11,4 +9,3 @@ const Inputcustom = ({ value, onChange }) => {
   )
 }
 
-export default Inputcustom

@@ -1,46 +1,46 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 // componentes
 import Inputcustom from './components/Inputcustom'
-import ButtonCustom from './components/ButtonCustom';
+import ButtonCustom from './components/ButtonCustom'
 
-function App() {
+export default function App() {
   // estados para manejar los inputs
-  const [n1, setN1] = useState("");
-  const [n2, setN2] = useState("");
+  const [n1, setN1] = useState('')
+  const [n2, setN2] = useState('')
 
   // controlamos el resultado
-  const [resultado, setResultado] = useState('');
-  const [showResult, setShowResult] = useState(false);
+  const [resultado, setResultado] = useState('')
+  const [showResult, setShowResult] = useState(false)
 
   // funcion de las operaciones
   const operacion = (type) => {
     // validamos los datos
-    if (n1 == "" || n2 == "") {
+    if (n1 == '' || n2 == '') {
       alert('Por favor rellena los datos para la operacion')
       return
     }
 
     setShowResult(true)
     // convertimos los datos a numeros
-    let N1 = parseFloat(n1);
-    let N2 = parseFloat(n2);
+    let N1 = parseFloat(n1)
+    let N2 = parseFloat(n2)
 
     // logica para cada caso
     switch (type) {
-      case "suma":
+      case 'suma':
         setResultado(N1 + N2)
-        break;
-      case "resta":
+        break
+      case 'resta':
         setResultado(N1 - N2)
-        break;
-      case "multiplicacion":
+        break
+      case 'multiplicacion':
         setResultado(N1 * N2)
-        break;
-      case "division":
+        break
+      case 'division':
         setResultado(N1 / N2)
-        break;
+        break
       default:
-        break;
+        break
     }
   }
 
@@ -98,4 +98,4 @@ function App() {
   )
 }
 
-export default App
+
